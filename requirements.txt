@@ -1,2 +1,4 @@
 requests
-beautifulsoap4
+lxml
+beautifulsoup4
+groq
