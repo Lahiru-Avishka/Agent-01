@@ -10,6 +10,8 @@ def my_trade_agent(coin_pair):
     
     
 def browse_web_for_trading_info(query):
+    # https://www.forexfactory.com/news
+
     return f"Browsing the web for information on: {query}"
 
 def filter_relevent_news(news_list, coin_pair):
@@ -20,6 +22,13 @@ class Sentiment(Enum):
     NEUTRAL = "neutral"
     POSITIVE = "positive"
     NEGATIVE = "negative"
+
+class NewsLink:
+    def __init__(self, title, link, description, pubdate):
+        self.title = title
+        self.link = link
+        self.description = description
+        self.pubdate = pubdate
 
 def extract_knoladge_from_news(news) -> Sentiment:
     return Sentiment.NEUTRAL 
